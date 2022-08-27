@@ -1,4 +1,4 @@
-html{
+html {
     font-size: 62.5%;
 }
 
@@ -73,7 +73,7 @@ main {
     grid-area: main;
     display: grid;
     justify-items: center;
-    background-color:orange;
+    background-color: orange;
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
@@ -141,55 +141,22 @@ nav,
     margin-bottom: 1rem;
 }
 
-h1{
+h1 {
     font-size: 4rem;
     font-weight: 1000;
 }
 
-h3{
+h3 {
     font-size: 2rem;
     font-weight: 800;
     line-height: 3rem;
 }
 
-p{
+p {
     font-size: 1.7rem;
 }
 
-@media only screen and (max-width: 768px) {
-    .gridIndex{
-        display:grid;
-        grid-template-areas: 
-        "logo representante"
-        "nav nav"
-        "main main"
-        "footer footer"
-        ;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(4, auto);
-    }
-    header { grid-area: logo;}
-    .representante {grid-area: representante;}
-    nav{grid-area: nav;}
-    main{grid-area: main;
-        display: flex;
-        flex-direction: column;
-}
-    footer{grid-area: footer;
-    display: flex;
-flex-direction: column;}
-.piePag{width: 100%;}
-h1{
-    font-size: 3rem;
-}
-.cards{width: auto;
-margin: 1rem;}
-.imgPrincipal img {width: 100%;}
-.encabezado{padding-left: 3rem;}
-.recuadroRepresentante {
-    border-radius: 3rem;
-} 
-}
+
 
 .gridContacto {
     display: grid;
@@ -206,7 +173,7 @@ margin: 1rem;}
     grid-area: main;
     display: grid;
     justify-items: center;
-    background-color:orange;
+    background-color: orange;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, auto);
     grid-template-areas:
@@ -214,15 +181,23 @@ margin: 1rem;}
     ;
 }
 
-.contacto{grid-area: contacto;
-margin: 5rem 0;}
-.ubicacion{grid-area: ubicacion;
-margin: 5rem 0;}
-main section h3{text-align: center;
-margin: 2rem 0;
-font-size: 3rem;}
+.contacto {
+    grid-area: contacto;
+    margin: 5rem 0;
+}
 
-form{
+.ubicacion {
+    grid-area: ubicacion;
+    margin: 5rem 0;
+}
+
+main section h3 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+form {
     margin: auto;
     width: 40rem;
     background: rgba(0, 0, 0, .4);
@@ -231,59 +206,173 @@ form{
     margin-top: 2rem;
     border-radius: .7rem;
 }
-input,textarea,label{
+
+input,
+textarea,
+label {
     width: 100%;
     margin-bottom: 2rem;
     padding: .4rem;
     box-sizing: border-box;
     font-size: 1.7rem;
 }
-textarea{
+
+textarea {
     min-height: 5rem;
     max-height: 8rem;
     max-width: 100%;
 }
 
-section div h2{
+section div h2 {
     text-align: center;
     width: 40rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-iframe{margin-top: 10rem;}
 
+
+
+/* MEDIA QUERIES MOBILE */
 @media only screen and (max-width: 768px) {
-    .gridContacto{
-        display:grid;
-        grid-template-areas: 
-        "logo representante"
-        "nav nav"
-        "main main"
-        "footer footer"
+
+    /* media queries index */
+    .gridIndex {
+        display: grid;
+        grid-template-areas:
+            "logo representante"
+            "nav nav"
+            "main main"
+            "footer footer"
         ;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, auto);
     }
-    header { grid-area: logo;}
-    .representante {grid-area: representante;}
-    nav{grid-area: nav;}
-    .mainContacto{grid-area: main;
+
+    header {
+        grid-area: logo;
+    }
+
+    .representante {
+        grid-area: representante;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
         display: flex;
         flex-direction: column;
-}
-    footer{grid-area: footer;
-    display: flex;
-flex-direction: column;}
-.piePag{width: 100%;}
-h1{
-    font-size: 3rem;
-}
-.encabezado{padding-left: 3rem;}
-.recuadroRepresentante {
-    border-radius: 3rem;
-} 
-.ubicacion iframe {width: 100%;
-}
-.contacto h2{width: auto;}
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .piePag {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .cards {
+        width: auto;
+        margin: 1rem;
+    }
+
+    .imgPrincipal img {
+        width: 100%;
+    }
+
+    .encabezado {
+        padding-left: 3rem;
+    }
+
+    .recuadroRepresentante {
+        border-radius: 3rem;
+    }
+
+    /* media queries contacto */
+    .gridContacto {
+        display: grid;
+        grid-template-areas:
+            "logo representante"
+            "nav nav"
+            "main main"
+            "footer footer"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    header {
+        grid-area: logo;
+    }
+
+    .representante {
+        grid-area: representante;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    .mainContacto {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .piePag {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .encabezado {
+        padding-left: 3rem;
+    }
+
+    .recuadroRepresentante {
+        border-radius: 3rem;
+    }
+
+    .ubicacion iframe {
+        width: 100%;
+    }
+
+    .contacto h2 {
+        width: auto;
+    }
 }
 
+/* MEDIA QUERIES DESKTOP */
+@media only screen and (min-width: 1200px) {
+    iframe {
+        margin-top: 10rem;
+    }
 
+    .contacto {
+        margin: 5rem 1rem;
+    }
+
+    .imgPrincipal {
+        justify-content: center;
+    }
+
+    .cards {
+        justify-content: space-around;
+    }
+}
